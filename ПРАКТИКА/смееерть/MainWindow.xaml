@@ -1,0 +1,80 @@
+﻿<Window x:Class="смееерть.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:смееерть"
+        mc:Ignorable="d"
+        Title="АВТОРИЗАЦИЯ" Height="400" Width="800">
+    <StackPanel Background="#dcdcdc">
+        <StackPanel Height="20"></StackPanel>
+        
+        <StackPanel>
+        <TextBlock HorizontalAlignment="Center" Text="АВТОРИЗАЦИЯ" FontSize="50" FontFamily="Segoe Script"/>
+            
+            <StackPanel Height="20"></StackPanel>
+            
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Width="40"/>
+            <StackPanel>
+                <TextBlock Text="Введите имя:" FontSize="20" FontFamily="Segoe Script"/>
+                <StackPanel Height="10"></StackPanel>
+                <TextBlock Text="Введите пароль:" FontSize="20" FontFamily="Segoe Script"/>
+            </StackPanel>
+            <StackPanel Width="20"/>
+            <StackPanel>
+
+                <TextBox Name="name" FontSize="15" HorizontalAlignment="Center" Width="500" FontFamily="Segoe Script" >
+                    <TextBox.Template>
+                        <ControlTemplate>
+                            <Border CornerRadius="20" Padding="2" BorderThickness="1" BorderBrush="#696969">
+                                <ScrollViewer Margin="0" x:Name="PART_ContentHost" />
+                            </Border>
+                        </ControlTemplate>
+                    </TextBox.Template>
+                </TextBox>
+
+                <StackPanel Height="10"></StackPanel>
+
+                <TextBox Name="pass" FontSize="15" HorizontalAlignment="Center" Width="500" FontFamily="Segoe Script" >
+                    <TextBox.Template>
+                        <ControlTemplate>
+                            <Border CornerRadius="20" Padding="2" BorderThickness="1" BorderBrush="#696969">
+                                <ScrollViewer Margin="0" x:Name="PART_ContentHost" />
+                            </Border>
+                        </ControlTemplate>
+                    </TextBox.Template>
+                </TextBox>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Height="20"></StackPanel>
+        <StackPanel>
+
+            <Button Name="vhod" Content="Войти" FontSize="20" HorizontalAlignment="Center" Width="300" FontFamily="Segoe Script" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+        <StackPanel>
+</StackPanel>
+
+        <StackPanel Height="80"/>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Width="200"/>
+            <TextBlock Text="У Вас ещё нет аккаунта? "  FontFamily="Segoe Script"/>
+            <StackPanel Width="20"/>
+            <Button Name="registra" Content="Зарегистрироваться" Width="150" FontFamily="Segoe Script" Background="Transparent" BorderBrush="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center" Click="registra_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>        
+    </StackPanel>
+</Window>
